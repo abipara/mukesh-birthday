@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Mukesh ❤️</title>
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+    font-family: Georgia, "Times New Roman", serif;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #39002f 0%,
+            #25001f 45%,
+            #170018 100%
+        );
+
+    color: white;
+}
+
+
+/* =========================
+   BACKGROUND GLOW
+========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(255, 70, 160, 0.08),
+            transparent 45%
+        );
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+/* =========================
+   PAGES
+========================= */
+
+.page {
+    position: absolute;
+
+    inset: 0;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    z-index: 5;
+}
+
+.page.active {
+    display: flex;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+    width: min(850px, 92%);
+
+    animation: pageIn 1s ease;
+}
+
+@keyframes pageIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* =========================
+   SMALL TOP TEXT
+========================= */
+
+.top-text {
+    font-size: 17px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+
+    color: #f8d9ed;
+
+    text-shadow:
+        0 0 10px rgba(255, 80, 180, 0.35);
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   GIFT
+========================= */
+
+.gift {
+    font-size: 75px;
+
+    margin-bottom: 25px;
+
+    animation:
+        giftFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes giftFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+
+/* =========================
+   MAIN TITLE
+========================= */
+
+.main-title {
+    margin: 0;
+
+    font-size: clamp(48px, 8vw, 78px);
+
+    font-weight: bold;
+
+    color: #ffe2f3;
+
+    text-shadow:
+        0 0 5px #ff8acb,
+        0 0 15px #ff4fae,
+        0 0 30px rgba(255, 50, 160, 0.7);
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   HEART BESIDE TITLE
+========================= */
+
+.title-heart {
+    display: inline-block;
+
+    font-size: 55px;
+
+    margin-left: 8px;
+
+    animation:
+        heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.2);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.15);
+    }
+
+}
+
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.subtitle {
+    margin-top: 25px;
+
+    margin-bottom: 30px;
+
+    font-size: 23px;
+
+    line-height: 1.35;
+
+    font-weight: bold;
+
+    color: #fff3fa;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,0.15);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    border: none;
+
+    outline: none;
+
+    cursor: pointer;
+
+    padding: 16px 32px;
+
+    margin: 10px;
+
+    border-radius: 40px;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4fae,
+            #ff6dbb
+        );
+
+    box-shadow:
+        0 0 12px rgba(255, 70, 170, 0.65),
+        0 0 30px rgba(255, 70, 170, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+button:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 18px rgba(255, 70, 170, 0.9),
+        0 0 40px rgba(255, 70, 170, 0.4);
+}
+
+button:active {
+    transform: scale(0.94);
+}
+
+
+/* =========================
+   PAGE 2
+========================= */
+
+.birthday-title {
+
+    font-size:
+        clamp(38px, 7vw, 65px);
+
+    color: #ffe0f2;
+
+    text-shadow:
+        0 0 8px #ff69b4,
+        0 0 22px rgba(255, 70, 170, 0.65);
+
+    margin-bottom: 15px;
+}
+
+.name {
+
+    font-size:
+        clamp(28px, 5vw, 45px);
+
+    color: #ff9ed0;
+
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 0 12px rgba(255, 100, 190, 0.7);
+}
+
+.message {
+
+    max-width: 700px;
+
+    margin:
+        0 auto 25px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    color: #ffeaf6;
+}
+
+
+/* =========================
+   PAGE 3
+========================= */
+
+.love-title {
+
+    font-size:
+        clamp(35px, 6vw, 55px);
+
+    color: #ffdff1;
+
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 0 15px rgba(255, 80, 170, 0.65);
+}
+
+.love-message {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    font-size: 20px;
+
+    line-height: 2;
+
+    color: #fff0f8;
+}
+
+.highlight {
+
+    color: #ff9bce;
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 10px rgba(255, 90, 180, 0.7);
+}
+
+
+/* =========================
+   PAGE 4
+========================= */
+
+.final-heart {
+
+    font-size: 75px;
+
+    animation:
+        heartbeat 1.2s infinite;
+}
+
+.final-title {
+
+    font-size:
+        clamp(40px, 7vw, 65px);
+
+    color: #ffe1f2;
+
+    text-shadow:
+        0 0 10px #ff65b4,
+        0 0 25px rgba(255, 70, 170, 0.6);
+
+    margin: 20px 0;
+}
+
+.final-message {
+
+    font-size: 21px;
+
+    line-height: 1.9;
+
+    color: #ffeaf5;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.floating-heart {
+
+    position: fixed;
+
+    bottom: -60px;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+    animation:
+        floatUp linear forwards;
+}
+
+@keyframes floatUp {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(-115vh)
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================
+   CLICK HEART BURST
+========================= */
+
+.click-heart {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 9999;
+
+    font-size: 24px;
+
+    animation:
+        burst 1.4s ease-out forwards;
+}
+
+@keyframes burst {
+
+    0% {
+
+        opacity: 1;
+
+        transform:
+            translate(0, 0)
+            scale(0.4)
+            rotate(0deg);
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(var(--x), var(--y))
+            scale(1.5)
+            rotate(var(--rotate));
+    }
+
+}
+
+
+/* =========================
+   SPARKLES
+========================= */
+
+.sparkle {
+
+    position: fixed;
+
+    color: #fff;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    opacity: 0.5;
+
+    animation:
+        sparkleAnim 2s infinite alternate;
+}
+
+@keyframes sparkleAnim {
+
+    from {
+        opacity: 0.15;
+        transform: scale(0.6);
+    }
+
+    to {
+        opacity: 0.9;
+        transform: scale(1.2);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 600px) {
+
+    .top-text {
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+
+    .gift {
+        font-size: 60px;
+    }
+
+    .main-title {
+        font-size: 43px;
+    }
+
+    .title-heart {
+        font-size: 40px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .message,
+    .love-message,
+    .final-message {
+        font-size: 17px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 14px 24px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     PAGE 1
+===================================================== -->
+
+<section class="page active" id="page1">
+
+    <div class="content">
+
+        <div class="top-text">
+            A LITTLE SURPRISE FOR YOU... 🎁
+        </div>
+
+        <div class="gift">
+            🎁
+        </div>
+
+        <h1 class="main-title">
+            Hey Mukesh
+            <span class="title-heart">❤️</span>
+        </h1>
+
+        <div class="subtitle">
+            Someone has something special<br>
+            to tell you today...
+        </div>
+
+        <button onclick="goToPage(2, event)">
+            Open Your Surprise 💌
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 2
+===================================================== -->
+
+<section class="page" id="page2">
+
+    <div class="content">
+
+        <div class="gift">
+            🎂
+        </div>
+
+        <h1 class="birthday-title">
+            Happy Birthday
+        </h1>
+
+        <div class="name">
+            My Favourite Person ❤️
+        </div>
+
+        <div class="name">
+            Mukesh Senthilkumar
+        </div>
+
+        <p class="message">
+
+            Today is not just another day... 💗
+
+            <br>
+
+            It's the day my favourite person
+            was born.
+
+            <br><br>
+
+            And yes...
+
+            <br>
+
+            <span class="highlight">
+                That's you, Mukesh. ❤️
+            </span>
+
+        </p>
+
+        <button onclick="goToPage(3, event)">
+            There's More... 💕
+        </button>
+
+        <br>
+
+        <button onclick="openSong(event)">
+            🎵 Our Song ❤️
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 3
+===================================================== -->
+
+<section class="page" id="page3">
+
+    <div class="content">
+
+        <div style="font-size:60px;">
+            💕
+        </div>
+
+        <h1 class="love-title">
+            Something From My Heart ❤️
+        </h1>
+
+        <p class="love-message">
+
+            இந்த உலகத்துல எனக்கு ரொம்ப பிடிச்ச
+            ஒரு பையன் இருக்கான்... ❤️
+
+            <br><br>
+
+            அவன் யாருன்னு கேட்டா...
+
+            <br>
+
+            <span class="highlight">
+                நீ தான். ❤️
+            </span>
+
+            <br><br>
+
+            என்னால ஏன் உன்ன இவ்வளவு பிடிக்குதுனு
+            எனக்கே தெரியல...
+
+            <br><br>
+
+            காலைல எழுந்ததுல இருந்து
+            இரவு தூங்குற வரைக்கும்...
+
+            <br>
+
+            <span class="highlight">
+                24/7 உன்னோட நினைப்பு தான். 🥹❤️
+            </span>
+
+            <br><br>
+
+            இது காதலா...
+
+            <br>
+
+            இல்ல அதையும் தாண்டினதா...
+
+            <br>
+
+            <span class="highlight">
+                எனக்கே தெரியல. 💗
+            </span>
+
+        </p>
+
+        <button onclick="goToPage(4, event)">
+            One Last Thing... 💖
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 4
+===================================================== -->
+
+<section class="page" id="page4">
+
+    <div class="content">
+
+        <div class="final-heart">
+            💝
+        </div>
+
+        <h1 class="final-title">
+            For You, Mukesh ❤️
+        </h1>
+
+        <p class="final-message">
+
+            Un photo en kitta illa...
+
+            <br><br>
+
+            aana...
+
+            <br>
+
+            <span class="highlight">
+                en mind-la un memories-ku
+                end card eh illa. ❤️
+            </span>
+
+            <br><br>
+
+            Nee enakku evlo special nu
+            words-la sollave mudiyadhu...
+
+            <br><br>
+
+            <span class="highlight">
+                Happy Birthday, Mukesh! 🎂❤️
+            </span>
+
+            <br><br>
+
+            Love you more than words can say. 💖
+
+        </p>
+
+        <button onclick="celebrate(event)">
+            💖 Forever Yours
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+/* =====================================================
+   PAGE CHANGE
+===================================================== */
+
+function goToPage(pageNumber, event) {
+
+    heartBurst(event);
+
+    document
+        .querySelectorAll(".page")
+        .forEach(function(page) {
+
+            page.classList.remove("active");
+
+        });
+
+
+    document
+        .getElementById("page" + pageNumber)
+        .classList.add("active");
+
+}
+
+
+
+/* =====================================================
+   YOUTUBE SONG
+===================================================== */
+
+function openSong(event) {
+
+    heartBurst(event);
+
+    const songURL =
+        "https://www.youtube.com/watch?v=_Elsl6C0pPY&list=RD_Elsl6C0pPY&index=1";
+
+
+    window.open(
+        songURL,
+        "_blank"
+    );
+
+}
+
+
+
+/* =====================================================
+   COLOURFUL HEART BURST
+===================================================== */
+
+function heartBurst(event) {
+
+    const hearts = [
+
+        "❤️",
+        "🩷",
+        "🧡",
+        "💛",
+        "💚",
+        "🩵",
+        "💙",
+        "💜",
+        "🤍",
+        "🩶",
+        "💖",
+        "💗",
+        "💓",
+        "💕",
+        "💞",
+        "💘",
+        "💝"
+
+    ];
+
+
+    let startX =
+        window.innerWidth / 2;
+
+    let startY =
+        window.innerHeight / 2;
+
+
+    if (event) {
+
+        startX =
+            event.clientX ||
+            startX;
+
+        startY =
+            event.clientY ||
+            startY;
+
+    }
+
+
+    for (
+        let i = 0;
+        i < 55;
+        i++
+    ) {
+
+        const heart =
+            document.createElement("div");
+
+
+        heart.className =
+            "click-heart";
+
+
+        heart.innerHTML =
+            hearts[
+                Math.floor(
+                    Math.random() *
+                    hearts.length
+                )
+            ];
+
+
+        heart.style.left =
+            startX + "px";
+
+
+        heart.style.top =
+            startY + "px";
+
+
+        const angle =
+            Math.random() *
+            Math.PI * 2;
+
+
+        const distance =
+            80 +
+            Math.random() * 300;
+
+
+        const x =
+            Math.cos(angle) *
+            distance;
+
+
+        const y =
+            Math.sin(angle) *
+            distance;
+
+
+        const rotation =
+            (Math.random() - 0.5) *
+            900;
+
+
+        heart.style.setProperty(
+            "--x",
+            x + "px"
+        );
+
+
+        heart.style.setProperty(
+            "--y",
+            y + "px"
+        );
+
+
+        heart.style.setProperty(
+            "--rotate",
+            rotation + "deg"
+        );
+
+
+        heart.style.fontSize =
+            (15 +
+            Math.random() * 28)
+            + "px";
+
+
+        document
+            .body
+            .appendChild(heart);
+
+
+        setTimeout(
+            function() {
+                heart.remove();
+            },
+            1500
+        );
+
+    }
+
+}
+
+
+
+/* =====================================================
+   FINAL CELEBRATION
+===================================================== */
+
+function celebrate(event) {
+
+    heartBurst(event);
+
+
+    setTimeout(function() {
+
+        heartBurst({
+
+            clientX:
+                window.innerWidth * 0.20,
+
+            clientY:
+                window.innerHeight * 0.45
+
+        });
+
+    }, 250);
+
+
+    setTimeout(function() {
+
+        heartBurst({
+
+            clientX:
+                window.innerWidth * 0.80,
+
+            clientY:
+                window.innerHeight * 0.45
+
+        });
+
+    }, 500);
+
+
+    setTimeout(function() {
+
+        heartBurst({
+
+            clientX:
+                window.innerWidth * 0.50,
+
+            clientY:
+                window.innerHeight * 0.25
+
+        });
+
+    }, 750);
+
+
+    setTimeout(function() {
+
+        alert(
+            "Happy Birthday Mukesh! ❤️🎂\n\n" +
+            "I Love You More Than Words Can Say! 💖"
+        );
+
+    }, 1500);
+
+}
+
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+function createFloatingHeart() {
+
+    const hearts = [
+
+        "❤️",
+        "🩷",
+        "💜",
+        "💙",
+        "💖",
+        "💕",
+        "💗",
+        "💓",
+        "💞",
+        "💝"
+
+    ];
+
+
+    const heart =
+        document.createElement("div");
+
+
+    heart.className =
+        "floating-heart";
+
+
+    heart.innerHTML =
+        hearts[
+            Math.floor(
+                Math.random() *
+                hearts.length
+            )
+        ];
+
+
+    heart.style.left =
+        Math.random() * 100 +
+        "vw";
+
+
+    heart.style.fontSize =
+        (15 +
+        Math.random() * 28)
+        + "px";
+
+
+    heart.style.animationDuration =
+        (5 +
+        Math.random() * 6)
+        + "s";
+
+
+    document
+        .body
+        .appendChild(heart);
+
+
+    setTimeout(
+        function() {
+            heart.remove();
+        },
+        12000
+    );
+
+}
+
+
+setInterval(
+    createFloatingHeart,
+    700
+);
+
+
+
+/* =====================================================
+   SPARKLES
+===================================================== */
+
+function createSparkles() {
+
+    const symbols = [
+        "✦",
+        "✧",
+        "·",
+        "⋆"
+    ];
+
+
+    for (
+        let i = 0;
+        i < 50;
+        i++
+    ) {
+
+        const sparkle =
+            document.createElement("div");
+
+
+        sparkle.className =
+            "sparkle";
+
+
+        sparkle.innerHTML =
+            symbols[
+                Math.floor(
+                    Math.random() *
+                    symbols.length
+                )
+            ];
+
+
+        sparkle.style.left =
+            Math.random() * 100 +
+            "vw";
+
+
+        sparkle.style.top =
+            Math.random() * 100 +
+            "vh";
+
+
+        sparkle.style.fontSize =
+            (8 +
+            Math.random() * 14)
+            + "px";
+
+
+        sparkle.style.animationDelay =
+            Math.random() * 3 +
+            "s";
+
+
+        document
+            .body
+            .appendChild(sparkle);
+
+    }
+
+}
+
+
+createSparkles();
+
+</script>
+
+</body>
+</html>
