@@ -3,188 +3,318 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Happy Birthday Mukesh ❤️</title>
 
 <style>
+
+/* =========================================================
+   BASIC RESET
+========================================================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     width: 100%;
-    min-height: 100%;
-    font-family: "Poppins", Arial, sans-serif;
-    overflow: hidden;
+    height: 100%;
 }
 
 body {
-    background: linear-gradient(
-        135deg,
-        #ff9a9e,
-        #fad0c4,
-        #fbc2eb,
-        #c6a0ff
-    );
-    background-size: 400% 400%;
-    animation: gradientMove 10s ease infinite;
-    color: white;
+    overflow: hidden;
+    font-family: Georgia, "Times New Roman", serif;
+    background:
+        radial-gradient(circle at 50% 35%, #4b0b3d 0%, #26001f 45%, #12000f 100%);
+    color: #fff;
 }
 
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
 
-/* =========================
-   BACKGROUND
-========================= */
+/* =========================================================
+   MAIN BACKGROUND
+========================================================= */
 
-.background {
+.main-container {
     position: fixed;
     inset: 0;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    pointer-events: none;
-    z-index: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(255, 70, 160, 0.16),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(255, 20, 120, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(255, 50, 150, 0.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #21001c,
+            #350025,
+            #170012
+        );
 }
 
-.heart {
+
+/* =========================================================
+   SOFT GLOW
+========================================================= */
+
+.glow {
     position: absolute;
-    font-size: 22px;
-    animation: floatHeart linear infinite;
-    opacity: 0.75;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+
+    background: rgba(255, 20, 140, 0.08);
+
+    filter: blur(100px);
+
+    pointer-events: none;
 }
 
-.heart:nth-child(1) {
-    left: 8%;
-    animation-duration: 8s;
-    animation-delay: 1s;
-}
-
-.heart:nth-child(2) {
-    left: 20%;
-    animation-duration: 10s;
-    animation-delay: 2s;
-}
-
-.heart:nth-child(3) {
-    left: 35%;
-    animation-duration: 7s;
-    animation-delay: 0s;
-}
-
-.heart:nth-child(4) {
+.glow.one {
+    top: -200px;
     left: 50%;
-    animation-duration: 11s;
-    animation-delay: 3s;
+    transform: translateX(-50%);
 }
 
-.heart:nth-child(5) {
-    left: 65%;
-    animation-duration: 9s;
-    animation-delay: 1s;
+.glow.two {
+    bottom: -300px;
+    left: -150px;
 }
 
-.heart:nth-child(6) {
-    left: 80%;
-    animation-duration: 12s;
-    animation-delay: 2s;
+.glow.three {
+    right: -200px;
+    top: 35%;
 }
 
-.heart:nth-child(7) {
-    left: 92%;
-    animation-duration: 8s;
-    animation-delay: 4s;
+
+/* =========================================================
+   FLOATING HEARTS
+========================================================= */
+
+.floating-heart {
+    position: absolute;
+
+    color: #ff4f9a;
+
+    opacity: 0.45;
+
+    text-shadow:
+        0 0 8px rgba(255, 50, 150, 0.8),
+        0 0 20px rgba(255, 50, 150, 0.5);
+
+    animation: floatHeart linear infinite;
+
+    pointer-events: none;
+
+    z-index: 1;
 }
 
 @keyframes floatHeart {
+
     0% {
-        transform: translateY(110vh) rotate(0deg);
+        transform:
+            translateY(110vh)
+            translateX(0)
+            scale(0.7)
+            rotate(0deg);
+
         opacity: 0;
     }
 
-    20% {
-        opacity: 0.8;
+    15% {
+        opacity: 0.5;
     }
 
-    80% {
-        opacity: 0.8;
+    50% {
+        transform:
+            translateY(50vh)
+            translateX(30px)
+            scale(1)
+            rotate(10deg);
+
+        opacity: 0.7;
+    }
+
+    85% {
+        opacity: 0.45;
     }
 
     100% {
-        transform: translateY(-120px) rotate(360deg);
+        transform:
+            translateY(-120px)
+            translateX(-30px)
+            scale(0.8)
+            rotate(-10deg);
+
         opacity: 0;
     }
 }
 
-/* =========================
-   STARS
-========================= */
 
-.star {
+/* Different heart positions */
+
+.h1 {
+    left: 7%;
+    font-size: 20px;
+    animation-duration: 13s;
+}
+
+.h2 {
+    left: 18%;
+    font-size: 15px;
+    animation-duration: 17s;
+    animation-delay: 3s;
+}
+
+.h3 {
+    left: 30%;
+    font-size: 18px;
+    animation-duration: 12s;
+    animation-delay: 5s;
+}
+
+.h4 {
+    left: 42%;
+    font-size: 12px;
+    animation-duration: 15s;
+    animation-delay: 2s;
+}
+
+.h5 {
+    left: 55%;
+    font-size: 17px;
+    animation-duration: 14s;
+    animation-delay: 6s;
+}
+
+.h6 {
+    left: 66%;
+    font-size: 21px;
+    animation-duration: 18s;
+    animation-delay: 1s;
+}
+
+.h7 {
+    left: 76%;
+    font-size: 14px;
+    animation-duration: 13s;
+    animation-delay: 4s;
+}
+
+.h8 {
+    left: 88%;
+    font-size: 20px;
+    animation-duration: 16s;
+    animation-delay: 7s;
+}
+
+
+/* =========================================================
+   LITTLE HEARTS ON SIDES
+========================================================= */
+
+.side-heart {
     position: absolute;
-    color: white;
-    animation: twinkle 2s infinite alternate;
+
+    font-size: 18px;
+
+    color: #ff4f9a;
+
+    opacity: 0.6;
+
+    text-shadow:
+        0 0 10px #ff4f9a,
+        0 0 20px rgba(255, 70, 170, 0.5);
+
+    animation: sideFloat 4s ease-in-out infinite;
+
+    z-index: 2;
 }
 
-.star:nth-child(8) {
-    top: 15%;
-    left: 15%;
-}
-
-.star:nth-child(9) {
-    top: 25%;
-    left: 75%;
-}
-
-.star:nth-child(10) {
+.side-heart.left-one {
+    left: 7%;
     top: 70%;
-    left: 20%;
 }
 
-.star:nth-child(11) {
-    top: 65%;
-    left: 85%;
+.side-heart.left-two {
+    left: 8%;
+    top: 78%;
+    animation-delay: 1s;
 }
 
-@keyframes twinkle {
-    from {
-        opacity: 0.2;
-        transform: scale(0.7);
+.side-heart.right-one {
+    right: 8%;
+    top: 45%;
+}
+
+.side-heart.right-two {
+    right: 9%;
+    top: 17%;
+    animation-delay: 1.5s;
+}
+
+@keyframes sideFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
     }
 
-    to {
-        opacity: 1;
-        transform: scale(1.2);
+    50% {
+        transform: translateY(-10px) scale(1.15);
     }
 }
 
-/* =========================
-   PAGES
-========================= */
+
+/* =========================================================
+   PAGE SYSTEM
+========================================================= */
 
 .page {
-    position: fixed;
+    position: absolute;
+
     inset: 0;
+
+    width: 100%;
+    height: 100%;
+
     display: none;
+
     justify-content: center;
     align-items: center;
-    text-align: center;
+
     padding: 25px;
-    z-index: 2;
+
+    z-index: 10;
 }
 
 .page.active {
     display: flex;
-    animation: pageIn 0.8s ease;
+
+    animation: pageAppear 0.8s ease;
 }
 
-@keyframes pageIn {
+@keyframes pageAppear {
+
     from {
         opacity: 0;
-        transform: scale(0.95);
+        transform: scale(0.97);
     }
 
     to {
@@ -193,83 +323,270 @@ body {
     }
 }
 
+
+/* =========================================================
+   CONTENT WRAPPER
+========================================================= */
+
 .content {
-    width: min(90%, 700px);
-    padding: 35px 25px;
-    border-radius: 30px;
-    background: rgba(255,255,255,0.16);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 15px 40px rgba(80, 20, 80, 0.25);
-    border: 1px solid rgba(255,255,255,0.3);
+    width: min(850px, 90vw);
+
+    text-align: center;
 }
 
-/* =========================
-   TEXT
-========================= */
 
-.small-text {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-}
+/* =========================================================
+   MAIN HEADING
+========================================================= */
 
-h1 {
-    font-size: clamp(2rem, 7vw, 4rem);
-    margin-bottom: 15px;
-    text-shadow: 0 4px 15px rgba(80, 20, 80, 0.25);
-}
+.main-title {
+    font-size: clamp(2.2rem, 5vw, 4rem);
 
-h2 {
-    font-size: clamp(1.6rem, 5vw, 3rem);
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
-    line-height: 1.8;
-}
-
-/* =========================
-   BUTTON
-========================= */
-
-button {
-    border: none;
-    outline: none;
-    cursor: pointer;
-    margin-top: 25px;
-    padding: 15px 28px;
-    border-radius: 50px;
-    font-size: 1rem;
     font-weight: bold;
-    color: #d63384;
-    background: white;
-    box-shadow: 0 8px 20px rgba(80,20,80,0.25);
-    transition: 0.3s ease;
+
+    color: #ffd9eb;
+
+    margin-bottom: 32px;
+
+    letter-spacing: 0.5px;
+
+    text-shadow:
+        0 0 8px rgba(255, 190, 220, 0.9),
+        0 0 18px rgba(255, 70, 160, 0.8),
+        0 0 35px rgba(255, 40, 140, 0.5);
+
+    animation: titleGlow 2.5s ease-in-out infinite alternate;
 }
 
-button:hover {
-    transform: translateY(-4px) scale(1.04);
-    box-shadow: 0 12px 28px rgba(80,20,80,0.35);
+@keyframes titleGlow {
+
+    from {
+        text-shadow:
+            0 0 8px rgba(255, 190, 220, 0.8),
+            0 0 18px rgba(255, 70, 160, 0.7);
+    }
+
+    to {
+        text-shadow:
+            0 0 12px rgba(255, 220, 235, 1),
+            0 0 25px rgba(255, 70, 160, 0.95),
+            0 0 45px rgba(255, 40, 140, 0.6);
+    }
 }
 
-button:active {
-    transform: scale(0.95);
+
+/* =========================================================
+   GLASS MESSAGE CARD
+========================================================= */
+
+.message-card {
+
+    width: min(780px, 88vw);
+
+    max-height: 68vh;
+
+    overflow-y: auto;
+
+    margin: 0 auto;
+
+    padding: 35px 45px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(91, 12, 72, 0.72),
+            rgba(57, 6, 48, 0.66)
+        );
+
+    border: 1px solid rgba(255, 90, 180, 0.08);
+
+    box-shadow:
+        0 0 30px rgba(255, 30, 150, 0.09),
+        inset 0 0 30px rgba(255, 50, 160, 0.025);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    scrollbar-width: none;
 }
 
-/* =========================
-   CAKE
-========================= */
+.message-card::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================================================
+   MESSAGE TEXT
+========================================================= */
+
+.message-text {
+
+    font-size: clamp(1rem, 2.1vw, 1.3rem);
+
+    line-height: 2.15;
+
+    color: #fff4fa;
+
+    text-shadow:
+        0 0 5px rgba(255, 210, 235, 0.2);
+}
+
+.message-text p {
+    margin-bottom: 28px;
+}
+
+.message-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   HIGHLIGHT TEXT
+========================================================= */
+
+.highlight {
+    color: #fff;
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 8px rgba(255, 100, 180, 0.5);
+}
+
+
+/* =========================================================
+   I LOVE YOU
+========================================================= */
+
+.love-line {
+
+    margin-top: 20px;
+
+    font-size: clamp(1.4rem, 3vw, 2rem);
+
+    font-weight: bold;
+
+    color: #fff;
+
+    text-shadow:
+        0 0 10px rgba(255, 80, 160, 0.7),
+        0 0 20px rgba(255, 50, 150, 0.5);
+
+    animation: loveGlow 2s infinite alternate;
+}
+
+@keyframes loveGlow {
+
+    from {
+        opacity: 0.85;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.next-button {
+
+    margin-top: 28px;
+
+    padding: 14px 32px;
+
+    border: none;
+
+    border-radius: 40px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff4b9b,
+            #ff5ca8
+        );
+
+    color: white;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 12px rgba(255, 70, 160, 0.35),
+        0 5px 20px rgba(255, 20, 130, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.next-button:hover {
+
+    transform: translateY(-3px) scale(1.03);
+
+    box-shadow:
+        0 0 18px rgba(255, 70, 160, 0.55),
+        0 8px 25px rgba(255, 20, 130, 0.3);
+}
+
+.next-button:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================================================
+   PAGE 1
+========================================================= */
+
+.page-one-title {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+
+    color: #ffdce9;
+
+    text-shadow:
+        0 0 10px #ff5ca8,
+        0 0 25px rgba(255, 60, 160, 0.8);
+
+    margin-bottom: 18px;
+}
+
+.page-one-subtitle {
+
+    color: #ffe8f2;
+
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   BIRTHDAY PAGE
+========================================================= */
 
 .cake {
-    font-size: 80px;
+    font-size: 70px;
+
     margin-bottom: 15px;
+
     animation: cakeBounce 1.5s ease-in-out infinite;
 }
 
 @keyframes cakeBounce {
-    0%,100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
 
@@ -278,32 +595,56 @@ button:active {
     }
 }
 
-/* =========================
-   LOVE MESSAGE
-========================= */
+.birthday-title {
 
-.love-message {
-    font-size: clamp(1.05rem, 3vw, 1.3rem);
-    line-height: 2;
-}
+    font-size: clamp(2rem, 6vw, 4rem);
 
-.highlight {
-    font-weight: bold;
-    font-size: 1.15em;
-}
+    color: #ffe0ed;
 
-.big-heart {
-    font-size: 70px;
-    animation: heartbeat 1.2s infinite;
+    text-shadow:
+        0 0 10px #ff4d9c,
+        0 0 25px rgba(255, 50, 150, 0.7);
+
     margin-bottom: 15px;
 }
 
+.birthday-name {
+
+    font-size: clamp(1.3rem, 3vw, 2rem);
+
+    color: #fff;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 0 10px rgba(255, 100, 180, 0.5);
+}
+
+
+/* =========================================================
+   FINAL PAGE
+========================================================= */
+
+.final-heart {
+
+    font-size: 70px;
+
+    margin-bottom: 20px;
+
+    animation: heartbeat 1.3s infinite;
+
+    filter:
+        drop-shadow(0 0 10px rgba(255, 40, 140, 0.7));
+}
+
 @keyframes heartbeat {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
     }
 
-    25% {
+    20% {
         transform: scale(1.15);
     }
 
@@ -316,95 +657,150 @@ button:active {
     }
 }
 
-/* =========================
-   CONFETTI
-========================= */
 
-.confetti {
-    position: fixed;
-    width: 10px;
-    height: 10px;
-    top: -20px;
-    z-index: 10;
-    pointer-events: none;
-    animation: fall 3s linear forwards;
-}
-
-@keyframes fall {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(110vh) rotate(720deg);
-        opacity: 0;
-    }
-}
-
-/* =========================
+/* =========================================================
    CLICK HEART BURST
-========================= */
+========================================================= */
 
 .click-heart {
+
     position: fixed;
+
+    left: 0;
+    top: 0;
+
     pointer-events: none;
-    font-size: 25px;
+
     z-index: 9999;
-    animation: heartBurst 1s ease-out forwards;
+
+    font-size: 20px;
+
+    animation:
+        heartBurst 1s ease-out forwards;
 }
 
 @keyframes heartBurst {
+
     0% {
-        transform: translate(0,0) scale(0.5);
+
+        transform:
+            translate(0, 0)
+            scale(0.5)
+            rotate(0deg);
+
         opacity: 1;
     }
 
     100% {
+
         transform:
-            translate(
-                var(--x),
-                var(--y)
-            )
-            scale(1.5)
-            rotate(var(--r));
+            translate(var(--move-x), var(--move-y))
+            scale(1.4)
+            rotate(var(--rotate));
+
         opacity: 0;
     }
 }
 
-/* =========================
+
+/* =========================================================
+   CONFETTI
+========================================================= */
+
+.confetti {
+
+    position: fixed;
+
+    top: -30px;
+
+    pointer-events: none;
+
+    z-index: 9998;
+
+    animation:
+        confettiFall 3.5s linear forwards;
+}
+
+@keyframes confettiFall {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
 @media (max-width: 600px) {
 
-    .content {
-        padding: 30px 20px;
-        border-radius: 25px;
+    .page {
+        padding: 15px;
     }
 
-    button {
-        padding: 14px 23px;
-        font-size: 0.95rem;
+    .message-card {
+
+        width: 94vw;
+
+        max-height: 67vh;
+
+        padding:
+            25px 22px;
     }
 
-    .cake {
-        font-size: 65px;
+    .message-text {
+
+        font-size: 1rem;
+
+        line-height: 1.9;
     }
 
-    .big-heart {
-        font-size: 60px;
+    .message-text p {
+        margin-bottom: 23px;
+    }
+
+    .main-title {
+        margin-bottom: 22px;
+    }
+
+    .next-button {
+        padding: 13px 25px;
+    }
+
+    .side-heart {
+        font-size: 15px;
     }
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- =========================
+
+<!-- =========================================================
      BACKGROUND MUSIC
-     YOUR UPLOADED SONG
-========================= -->
+     
+     IMPORTANT:
+     This file must be in the same GitHub folder
+     as index.html
+========================================================= -->
 
 <audio
     id="bgMusic"
@@ -414,239 +810,286 @@ button:active {
 </audio>
 
 
-<!-- =========================
-     BACKGROUND EFFECTS
-========================= -->
+<div class="main-container">
 
-<div class="background">
+    <!-- Soft background glow -->
 
-    <div class="heart">❤️</div>
-    <div class="heart">💖</div>
-    <div class="heart">💕</div>
-    <div class="heart">💗</div>
-    <div class="heart">💓</div>
-    <div class="heart">💞</div>
-    <div class="heart">💘</div>
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+    <div class="glow three"></div>
 
-    <div class="star">✨</div>
-    <div class="star">⭐</div>
-    <div class="star">✨</div>
-    <div class="star">🌟</div>
+
+    <!-- =====================================================
+         FLOATING HEARTS
+    ====================================================== -->
+
+    <div class="floating-heart h1">♡</div>
+    <div class="floating-heart h2">♥</div>
+    <div class="floating-heart h3">♡</div>
+    <div class="floating-heart h4">♥</div>
+    <div class="floating-heart h5">♡</div>
+    <div class="floating-heart h6">♥</div>
+    <div class="floating-heart h7">♡</div>
+    <div class="floating-heart h8">♥</div>
+
+
+    <!-- Side hearts -->
+
+    <div class="side-heart left-one">💗</div>
+    <div class="side-heart left-two">💗</div>
+
+    <div class="side-heart right-one">💞</div>
+    <div class="side-heart right-two">💕</div>
+
+
+    <!-- =====================================================
+         PAGE 1
+    ====================================================== -->
+
+    <section class="page active" id="page1">
+
+        <div class="content">
+
+            <div class="page-one-title">
+                Hey Mukesh ❤️
+            </div>
+
+            <div class="page-one-subtitle">
+                Someone has something special<br>
+                to tell you today...
+            </div>
+
+            <button
+                class="next-button"
+                onclick="goToPage(2, true)">
+                Open Your Surprise... 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 2
+    ====================================================== -->
+
+    <section class="page" id="page2">
+
+        <div class="content">
+
+            <div class="cake">
+                🎂
+            </div>
+
+            <div class="birthday-title">
+                Happy Birthday ❤️
+            </div>
+
+            <div class="birthday-name">
+                Mukesh Senthilkumar
+            </div>
+
+            <div class="page-one-subtitle">
+                My favourite person in this whole world... ❤️
+            </div>
+
+            <button
+                class="next-button"
+                onclick="goToPage(3)">
+                There's Something More... 💕
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 3
+         THIS IS THE DARK PINK THEME FROM YOUR SCREENSHOT
+    ====================================================== -->
+
+    <section class="page" id="page3">
+
+        <div class="content">
+
+            <h1 class="main-title">
+                Something From My Heart ❤️
+            </h1>
+
+
+            <div class="message-card">
+
+                <div class="message-text">
+
+                    <p>
+                        இந்த உலகத்தில் எனக்கு ரொம்ப பிடிச்ச
+                        ஒரு பையன் இருக்கான்... ❤️
+                    </p>
+
+                    <p>
+                        அவன் யாருன்னு கேட்டா —
+                        <span class="highlight">நீ தான். ❤️</span>
+                    </p>
+
+                    <p>
+                        எனக்கு எவ்வளவு பேரு தெரிஞ்சிருந்தாலும்,
+                        என் மனசுக்கு பிடிச்சது நீ மட்டும் தான்.
+                    </p>
+
+                    <p>
+                        உண்மையா சொல்லணும்னா...
+                        நான் 24/7 உன்னையே நினைச்சிட்டு இருக்கேன்.
+                        🥹❤️
+                    </p>
+
+                    <p>
+                        உன்னை இவ்வளவு பிடிக்கும்னு,
+                        இந்த feeling-க்கு என்ன பெயர்னு கூட
+                        எனக்கு தெரியல...
+                    </p>
+
+                    <p>
+                        But one thing I know...
+                    </p>
+
+                    <div class="love-line">
+                        I LOVE YOU SO MUCH. ❤️
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="next-button"
+                onclick="goToPage(4)">
+                One Last Thing... 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 4
+    ====================================================== -->
+
+    <section class="page" id="page4">
+
+        <div class="content">
+
+            <div class="final-heart">
+                ❤️
+            </div>
+
+            <h1 class="main-title">
+                One Last Thing...
+            </h1>
+
+            <div class="message-card">
+
+                <div class="message-text">
+
+                    <p>
+                        Un photo en kitta illa...
+                    </p>
+
+                    <p>
+                        aana en mind-la
+                        un memories-ku
+                        <span class="highlight">
+                            end card eh illa. ❤️
+                        </span>
+                    </p>
+
+                    <p>
+                        Happy Birthday, Mukesh 🎂
+                    </p>
+
+                    <div class="love-line">
+                        Love you more than words can say. ❤️
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="next-button"
+                onclick="finalCelebration()">
+                One Last Click... 💌
+            </button>
+
+        </div>
+
+    </section>
+
 
 </div>
 
 
-<!-- =========================
-     PAGE 1
-========================= -->
-
-<section class="page active" id="page1">
-
-    <div class="content">
-
-        <div class="big-heart">💖</div>
-
-        <div class="small-text">
-            Hey Mukesh ❤️
-        </div>
-
-        <h1>
-            Someone has something<br>
-            special to tell you today...
-        </h1>
-
-        <p>
-            There is a little surprise waiting for you. 💌
-        </p>
-
-        <button onclick="nextPage(2, true)">
-            Open Your Surprise 💌
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     PAGE 2
-========================= -->
-
-<section class="page" id="page2">
-
-    <div class="content">
-
-        <div class="cake">
-            🎂
-        </div>
-
-        <h1>
-            Happy Birthday
-        </h1>
-
-        <h2>
-            My Favourite Person ❤️
-        </h2>
-
-        <p>
-            Mukesh Senthilkumar
-        </p>
-
-        <button onclick="nextPage(3)">
-            One More Thing... 💕
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     PAGE 3
-========================= -->
-
-<section class="page" id="page3">
-
-    <div class="content">
-
-        <div class="big-heart">
-            ❤️
-        </div>
-
-        <p class="love-message">
-
-            இந்த உலகத்துல எனக்கு ரொம்ப பிடிச்ச
-            ஒரு பையன் இருக்கான்... ❤️
-
-            <br><br>
-
-            அவன் யாருன்னு கேட்டா —
-
-            <br>
-
-            <span class="highlight">
-                நீ தான். ❤️
-            </span>
-
-            <br><br>
-
-            உன்ன நான் எவ்வளவு லவ் பண்றேன்னு
-            எனக்கே தெரியல...
-
-            <br><br>
-
-            24/7 உன்னோட நினைப்பு தான். 💖
-
-            <br><br>
-
-            இந்த அளவுக்கு ஒருத்தரை
-            இவ்வளவு love பண்ண முடியுமா
-            என்று எனக்கே தெரியாது...
-
-            <br><br>
-
-            ஆனா ஒன்று மட்டும் தெரியும்...
-
-            <br>
-
-            <span class="highlight">
-                அது நீ தான். ❤️
-            </span>
-
-        </p>
-
-        <button onclick="nextPage(4)">
-            Last Surprise 💗
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     PAGE 4
-========================= -->
-
-<section class="page" id="page4">
-
-    <div class="content">
-
-        <div class="big-heart">
-            💖
-        </div>
-
-        <h2>
-            Un photo en kitta illa...
-        </h2>
-
-        <p>
-
-            aana en mind-la
-
-            <br>
-
-            un memories-ku
-
-            <br>
-
-            <span class="highlight">
-                end card eh illa. ❤️
-            </span>
-
-            <br><br>
-
-            Happy Birthday, Mukesh 🎂
-
-            <br>
-
-            Love you more than words can say. ❤️
-
-        </p>
-
-        <button onclick="celebrate()">
-            One Last Click 💖
-        </button>
-
-    </div>
-
-</section>
-
-
 <script>
 
-/* =========================
-   BACKGROUND MUSIC
-========================= */
+/* =========================================================
+   MUSIC
+========================================================= */
 
-const bgMusic = document.getElementById("bgMusic");
+const bgMusic =
+    document.getElementById("bgMusic");
 
 bgMusic.volume = 0.65;
 
 
-/* =========================
+/* =========================================================
    PAGE CHANGE
-========================= */
+========================================================= */
 
-function nextPage(pageNumber, startMusic = false) {
+function goToPage(pageNumber, startMusic = false) {
 
-    document.querySelectorAll(".page").forEach(page => {
+    const pages =
+        document.querySelectorAll(".page");
+
+    pages.forEach(function(page) {
+
         page.classList.remove("active");
+
     });
 
-    const next = document.getElementById("page" + pageNumber);
 
-    if (next) {
-        next.classList.add("active");
+    const nextPage =
+        document.getElementById(
+            "page" + pageNumber
+        );
+
+    if (nextPage) {
+
+        nextPage.classList.add("active");
+
     }
 
-    /* Start song only when user clicks
-       "Open Your Surprise" */
+
+    /*
+       Music starts ONLY after the user
+       clicks the first button.
+
+       Because the audio element is outside
+       all pages, it does NOT restart
+       when pages change.
+    */
 
     if (startMusic) {
 
-        bgMusic.play().catch(error => {
-            console.log("Music waiting for browser permission.");
+        bgMusic.play().catch(function(error) {
+
+            console.log(
+                "Browser is waiting for user interaction."
+            );
+
         });
 
         createConfetti();
@@ -656,61 +1099,103 @@ function nextPage(pageNumber, startMusic = false) {
 }
 
 
-/* =========================
-   CLICK HEART BURST
-========================= */
+/* =========================================================
+   HEART BURST ON EVERY CLICK
+========================================================= */
 
-document.addEventListener("click", function(event) {
+document.addEventListener(
+    "click",
+    function(event) {
 
-    const hearts = [
-        "❤️",
-        "💖",
-        "💕",
-        "💗",
-        "💓",
-        "💞",
-        "💘",
-        "💝"
-    ];
+        const heartSymbols = [
+            "❤️",
+            "💖",
+            "💕",
+            "💗",
+            "💓",
+            "💞",
+            "💘",
+            "💝"
+        ];
 
-    for (let i = 0; i < 10; i++) {
 
-        const heart = document.createElement("div");
+        for (let i = 0; i < 10; i++) {
 
-        heart.className = "click-heart";
+            const heart =
+                document.createElement("div");
 
-        heart.innerText =
-            hearts[Math.floor(Math.random() * hearts.length)];
+            heart.className =
+                "click-heart";
 
-        heart.style.left = event.clientX + "px";
-        heart.style.top = event.clientY + "px";
 
-        const x =
-            (Math.random() - 0.5) * 220 + "px";
+            heart.innerText =
+                heartSymbols[
+                    Math.floor(
+                        Math.random() *
+                        heartSymbols.length
+                    )
+                ];
 
-        const y =
-            (Math.random() - 0.5) * 220 + "px";
 
-        const r =
-            (Math.random() - 0.5) * 360 + "deg";
+            heart.style.left =
+                event.clientX + "px";
 
-        heart.style.setProperty("--x", x);
-        heart.style.setProperty("--y", y);
-        heart.style.setProperty("--r", r);
+            heart.style.top =
+                event.clientY + "px";
 
-        document.body.appendChild(heart);
 
-        setTimeout(() => {
-            heart.remove();
-        }, 1000);
+            const moveX =
+                (Math.random() - 0.5) *
+                240;
+
+            const moveY =
+                (Math.random() - 0.5) *
+                240;
+
+            const rotate =
+                (Math.random() - 0.5) *
+                360;
+
+
+            heart.style.setProperty(
+                "--move-x",
+                moveX + "px"
+            );
+
+            heart.style.setProperty(
+                "--move-y",
+                moveY + "px"
+            );
+
+            heart.style.setProperty(
+                "--rotate",
+                rotate + "deg"
+            );
+
+
+            document.body.appendChild(
+                heart
+            );
+
+
+            setTimeout(
+                function() {
+
+                    heart.remove();
+
+                },
+                1000
+            );
+
+        }
+
     }
+);
 
-});
 
-
-/* =========================
+/* =========================================================
    CONFETTI
-========================= */
+========================================================= */
 
 function createConfetti() {
 
@@ -718,68 +1203,112 @@ function createConfetti() {
         "❤️",
         "💖",
         "💕",
-        "✨",
-        "🎉",
         "💗",
-        "⭐",
-        "💝"
+        "✨",
+        "💝",
+        "🎉",
+        "⭐"
     ];
+
 
     for (let i = 0; i < 45; i++) {
 
-        const piece = document.createElement("div");
+        const piece =
+            document.createElement("div");
 
-        piece.className = "confetti";
+        piece.className =
+            "confetti";
+
 
         piece.innerText =
-            symbols[Math.floor(Math.random() * symbols.length)];
+            symbols[
+                Math.floor(
+                    Math.random() *
+                    symbols.length
+                )
+            ];
+
 
         piece.style.left =
             Math.random() * 100 + "vw";
 
+
         piece.style.fontSize =
-            (12 + Math.random() * 20) + "px";
+            12 +
+            Math.random() * 18 +
+            "px";
+
 
         piece.style.animationDuration =
-            (2 + Math.random() * 3) + "s";
+            2.5 +
+            Math.random() * 2 +
+            "s";
+
 
         piece.style.animationDelay =
-            Math.random() * 1.5 + "s";
+            Math.random() * 0.8 +
+            "s";
 
-        document.body.appendChild(piece);
 
-        setTimeout(() => {
-            piece.remove();
-        }, 6000);
+        document.body.appendChild(
+            piece
+        );
+
+
+        setTimeout(
+            function() {
+
+                piece.remove();
+
+            },
+            5500
+        );
 
     }
 
 }
 
 
-/* =========================
+/* =========================================================
    FINAL CELEBRATION
-========================= */
+========================================================= */
 
-function celebrate() {
+function finalCelebration() {
 
     createConfetti();
 
-    for (let i = 0; i < 3; i++) {
 
-        setTimeout(() => {
+    setTimeout(
+        function() {
+
             createConfetti();
-        }, i * 700);
 
-    }
+        },
+        600
+    );
 
-    setTimeout(() => {
 
-        alert(
-            "Happy Birthday Mukesh! ❤️🎂\n\nI Love You! 💖"
-        );
+    setTimeout(
+        function() {
 
-    }, 900);
+            createConfetti();
+
+        },
+        1200
+    );
+
+
+    setTimeout(
+        function() {
+
+            alert(
+                "Happy Birthday Mukesh! ❤️🎂\n\n" +
+                "I Love You So Much! 💖"
+            );
+
+        },
+        1500
+    );
 
 }
 
